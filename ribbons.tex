@@ -38,7 +38,6 @@
 
 
 \begin{document}
-\begin{huge}
 {\setstretch{0.0}{
 
 RIBBONS
@@ -108,7 +107,16 @@ Let  $f_{n+1} \forks f_n$ for all $n \in \Bbb N$. Then this sequence has a \b{ce
 
 Define $\center(z) =  f_{|z|}(z).$ Then $\forall n \ \center \forks f_n$, and any other ribbon that manages this is equivalent to $\center$.
 
+\section{Identity}
+We check that $ff^* \in \ribbons$. Let $f \in \ribbons$. Then $n > 0 \implies (ff^*)(n) = \frac{f(n)}{f(-n)}$. 
+
+Also $f(n) < f(n+1)$ and $f(-n-1) < f(-n)  \implies f(n)f(-n-1) < f(n+1)f(-n) \implies \frac{f(n)}{f(-n)} < \frac{f(n+1)}{f(-(n+1)} $. So $ff^*$ is increasing on $\Bbb N$. 
+
+Note that $z < 0 \implies z = -n \implies (ff^*)(-n) = \frac{f(-n)}{f(n)}$.
+
+Then $f(-n) > f(-(n+1))$ and $f(n+1) > f(n)$ give $f(-n)f(n+1) > f(-(n+1))f(n)$. So $\frac{f(-n)}{f(n)} > \frac{f(-(n+1)}{f(n+1)}$, and $ff^*$ is decreasing on $- \Bbb N$.
+
+Also $\frac{f(-n)}{f(n)}-\frac{f(n)}{f(-n)} = \frac{(f(-n)-f(n))(f(-n)+f(n))}{f(n)f(-n)} \to 0$, since $f$ is bounded and $f \in \ribbons$. 
 }}
 
-\end{huge}
 \end{document}
