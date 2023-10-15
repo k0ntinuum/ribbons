@@ -57,17 +57,14 @@ Denote the set of all such ribbons by $\ribbons$.
 Let $f(0) = 1, f(n) = n[n+1]^{-1}$ for $n > 0$, and $f(n) = [|n|+1]|n|^{-1}$ for $n < 0$. Then  $f = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},1,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a ribbon.\\
 As we'll see, $f$ is a multiplicative identity.
 
-\section{Another Example : Subribbons}
-
-Let $g(n) = f(2n)$. Then $g = ...\frac{11}{10},\frac{9}{8},\frac{7}{6},\frac{5}{4},\frac{3}{2},1,\frac{2}{3},\frac{4}{5},\frac{6}{7},\frac{8}{9},\frac{10}{11},... $ is a ribbon, which we can call a \b{subribbon}.  As we'll see, $g$ is equivalent to $f$ and therefore also a multiplicative identity.
 
 \section{Order }
 
-Define $f \forks g$ if $z > 0 \implies g(z) \le f(z) < f(-z) \le g(-z)$. 
+Define $f \forks g$ if $n > 0 \implies g(n) \le f(n) < f(-n) \le g(-n)$. 
 
 Then define $f \sim  g$ if $\exists h \in \ribbons$ such that $ h \forks f$ and $h \sqsubset g $. 
 
-Also define $f < g$ if there $\exists z > 0$ such that $ f(-z) < g(z)$. 
+Also define $f < g$ if there $\exists n > 0$ such that $ f(-n) < g(n)$. 
 
 For all $f,g \in \ribbons$ we have $f < g, f>g$, or $f \sim g$.\\
 
