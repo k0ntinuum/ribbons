@@ -1,0 +1,121 @@
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{ mathrsfs }
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[margin=0.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{ulem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\usepackage{hyperref}
+\usepackage[autostyle]{csquotes}
+
+\usepackage{cancel}
+\renewcommand{\i}{\textit}
+\renewcommand{\b}{\textbf}
+\newcommand{\q}{\enquote}
+\newcommand{\p}{$\phi \ $}
+
+\renewcommand{\H}{\Bbb H}
+%\renewcommand{\l}[1]{\lceil #1 \rceil }
+\renewcommand{\l}[1]{( #1 ) }
+%\newcommand{\lte}{\sqsubset}
+%\newcommand{\lte}{\angle}
+\newcommand{\lte}{\preceq}
+\newcommand{\ribbons}{\Bbb I}
+\newcommand{\forks}{ \sqsubset}
+\newcommand{\ident}{I}
+\renewcommand{\center}{\mathring f  }
+
+
+
+%\vskip1.0in
+
+
+
+\begin{document}
+\begin{huge}
+{\setstretch{0.0}{
+
+RIBBONS
+
+\section{Definition}
+A function $f : \Bbb Z \to \Bbb Q$ is a \b{ribbon} when 
+
+(1) $z > 0  \implies f(z) < f(z+1) < f(-(z+1)) < f(-z)$ 
+
+(2) $f(-z) - f(z) \longrightarrow 0$. 
+
+The structure of a ribbon is therefore 
+
+$$f(1) < f(2) < f(3) < ... < f(-3) < f(-2) < f(-1)$$.
+
+Denote the set of all such ribbons by $\ribbons$.
+
+\section{An Example}
+
+Let $f(0) = 1, f(n) = n[n+1]^{-1}$ for $n > 0$, and $f(n) = [|n|+1]|n|^{-1}$ for $n < 0$. Then  $f = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},1,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a ribbon.\\
+As we'll see, $f$ is a multiplicative identity.
+
+\section{Another Example : Subribbons}
+
+Let $g(n) = f(2n)$. Then $g = ...\frac{11}{10},\frac{9}{8},\frac{7}{6},\frac{5}{4},\frac{3}{2},1,\frac{2}{3},\frac{4}{5},\frac{6}{7},\frac{8}{9},\frac{10}{11},... $ is a ribbon, which we can call a \b{subribbon}.  As we'll see, $g$ is equivalent to $f$ and therefore also a multiplicative identity.
+
+\section{Order }
+
+Define $f \forks g$ if $z > 0 \implies g(z) \le f(z) < f(-z) \le g(-z)$. 
+
+Then define $f \sim  g$ if $\exists h \in \ribbons$ such that $ h \forks f$ and $h \sqsubset g $. 
+
+Also define $f < g$ if there $\exists z > 0$ such that $ f(-z) < g(z)$. 
+
+For all $f,g \in \ribbons$ we have $f < g, f>g$, or $f \sim g$.\\
+
+\section{Addition and Multiplication}
+
+Define $f + g$ by $(f + g)(z) = f(z) + g(z)$.
+
+Define $fg$ by $(fg)(z) = f(z)g(z)$. 
+
+Then $f_0 \sim f_1, g_0 \sim g_1 \implies f_0 + g_0 \sim f_1 + g_1$.
+
+Also $f_0 \sim f_1, g_0 \sim g_1 \implies f_0g_0 \sim f_1g_1$.\\
+
+\section{A Multiplicative Identity}
+
+Let $\ident(0) = 1, \ident(z) = z[z+1]^{-1}$ for $z > 0$, and $\ident(z) = [|z|+1]|z|^{-1}$ for $z < 0$. Then  $\ident = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},1,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a multiplicative identity on $\ribbons$. 
+
+\section{A Multiplicative Inverse}
+
+For $f \in \ribbons$, define $f^*$ by $f^*(z) =  [ f(-z) ]^{-1} $. Then $f^* \in \ribbons$ and $ff^* \sim \ident$.
+
+\section{Injecting rational numbers into the set of ribbons}
+
+Define $f^p : Z \to Q$ by $f^p(z) = \frac{z}{z+1}p$ if $z > 0$, $f^p(z) = \frac{|z|+1}{|z|}p$ if $z < 0$, and $f^p(0) = p$. Then $f^p = ... \frac{5}{4}p,\frac{4}{3}p,\frac{3}{2}p,\frac{2}{1}p,p,\frac{1}{2}p,\frac{2}{3}p,\frac{3}{4}p,\frac{4}{5}p ...$ is a ribbon.
+
+\textbf{Proposition:} $\neg [ f < g ] \wedge \neg [ g < f ]  \implies f \approx g$.\\ 
+
+
+Let $\lceil{a,b}\rceil$ be the maximum and $\lfloor{a,b}\rfloor$ be the minimum of $a$ and $b$.  Then  $z > 0  \implies \lceil f(z),g(z) \rceil < \lfloor f(-z),g(-z) \rfloor$. 
+
+Define $h(z) = \lfloor f(z),g(z) \rfloor$ for $z < 0$, $h(z) = \lceil f(z),g(z) \rceil$ for $ z > 0$. Then $h \forks f$ and $h \forks g$, so $f \sim g$.\\
+
+\b{Proposition:} $f \in \ribbons \implies f^* \in \ribbons$.\\
+
+
+Note that $0 < f(1) \le f(n) < f(-n)$, so that $[f(-n)]^{-1} <  [f(n)]^{-1} \le [f(1)]^{-1}$, and $f^*(-n) - f^* (n) = f(n)^{-1} - f(-n)^{-1} = [f(-n) - f(n)][f(-n)^{-1}f(n)^{-1}] < [f(-n) - f(n)][f(1)]^{-2} \to 0$. So $f^* \in I$.\\
+
+\section{A limit}
+
+Let  $f_{n+1} \forks f_n$ for all $n \in \Bbb N$. Then this sequence has a \b{center}, which is something like a limit in our realm without a distance function (because we don't have subtraction.) 
+
+Define $\center(z) =  f_{|z|}(z).$ Then $\forall n \ \center \forks f_n$, and any other ribbon that manages this is equivalent to $\center$.
+
+}}
+
+\end{huge}
+\end{document}
