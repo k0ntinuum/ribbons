@@ -1,0 +1,83 @@
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{ mathrsfs }
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[margin=0.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{ulem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\usepackage{hyperref}
+\usepackage[autostyle]{csquotes}
+
+\usepackage{cancel}
+\renewcommand{\i}{\textit}
+\renewcommand{\b}{\textbf}
+\newcommand{\q}{\enquote}
+\newcommand{\p}{$\phi \ $}
+
+\renewcommand{\H}{\Bbb H}
+%\renewcommand{\l}[1]{\lceil #1 \rceil }
+\renewcommand{\l}[1]{( #1 ) }
+%\newcommand{\lte}{\sqsubset}
+%\newcommand{\lte}{\angle}
+\newcommand{\lte}{\preceq}
+\newcommand{\ribbons}{\Bbb I}
+\newcommand{\forks}{ \sqsubset}
+\newcommand{\ident}{I}
+\renewcommand{\center}{\mathring f  }
+
+\newcommand{\N}{ \Bbb N}
+
+%\vskip1.0in
+
+
+
+\begin{document}
+{\setstretch{0.0}{
+
+\begin{huge}
+RIBBONS [ SELECTED PROOFS ] 
+
+
+\textbf{Proposition:} $\neg [ f < g ] \wedge \neg [ g < f ]  \implies f \approx g$.\\ 
+
+
+Let $\lceil{a,b}\rceil$ be the maximum and $\lfloor{a,b}\rfloor$ be the minimum of $a$ and $b$.  Then  $z > 0  \implies \lceil f(z),g(z) \rceil < \lfloor f(-z),g(-z) \rfloor$. 
+
+Define $h(z) = \lfloor f(z),g(z) \rfloor$ for $z < 0$, $h(z) = \lceil f(z),g(z) \rceil$ for $ z > 0$. Then $h \forks f$ and $h \forks g$, so $f \sim g$.\\
+
+\b{Proposition:} $f \in \ribbons \implies f^* \in \ribbons$.\\
+
+
+Note that $0 < f(1) \le f(n) < f(-n)$, so that $[f(-n)]^{-1} <  [f(n)]^{-1} \le [f(1)]^{-1}$, and $f^*(-n) - f^* (n) = f(n)^{-1} - f(-n)^{-1} = [f(-n) - f(n)][f(-n)^{-1}f(n)^{-1}] < [f(-n) - f(n)][f(1)]^{-2} \to 0$. So $f^* \in I$.\\
+
+\section{A limit}
+
+Let  $f_{n+1} \forks f_n$ for all $n \in \Bbb N$. Then this sequence has a \b{center}, which is something like a limit in our realm without a distance function (because we don't have subtraction.) 
+
+Define $\center(z) =  f_{|z|}(z).$ Then $\forall n \ \center \forks f_n$, and any other ribbon that manages this is equivalent to $\center$.
+
+\section{Identity}
+We check that $ff^* \in \ribbons$. Let $f \in \ribbons$. Then $n > 0 \implies (ff^*)(n) = \frac{f(n)}{f(-n)}$. 
+
+Also $f(n) < f(n+1)$ and $f(-n-1) < f(-n)  \implies f(n)f(-n-1) < f(n+1)f(-n) \implies \frac{f(n)}{f(-n)} < \frac{f(n+1)}{f(-(n+1)} $. So $ff^*$ is increasing on $\Bbb N$. 
+
+Note that $z < 0 \implies z = -n \implies (ff^*)(-n) = \frac{f(-n)}{f(n)}$.
+
+Then $f(-n) > f(-(n+1))$ and $f(n+1) > f(n)$ give $f(-n)f(n+1) > f(-(n+1))f(n)$. So $\frac{f(-n)}{f(n)} > \frac{f(-(n+1)}{f(n+1)}$, and $ff^*$ is decreasing on $- \Bbb N$.
+
+Also $\frac{f(-n)}{f(n)}-\frac{f(n)}{f(-n)} = \frac{(f(-n)-f(n))(f(-n)+f(n))}{f(n)f(-n)} \to 0$, since $f$ is bounded and $f \in \ribbons$. 
+
+
+\end{huge}
+
+}}
+
+
+
+\end{document}

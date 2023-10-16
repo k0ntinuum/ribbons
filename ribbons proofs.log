@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  15 OCT 2023 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  15 OCT 2023 19:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**ribbons.tex
-(./ribbons.tex
+**"ribbons proofs.tex"
+(./ribbons proofs.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -351,8 +351,8 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box56
 )
-(./ribbons.aux)
-\openout1 = `ribbons.aux'.
+(./ribbons proofs.aux)
+\openout1 = `"ribbons proofs.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
@@ -431,62 +431,66 @@ e
 ))
 Package hyperref Info: Link coloring OFF on input line 40.
 
-(./ribbons.out) (./ribbons.out)
+(./ribbons proofs.out) (./ribbons proofs.out)
 \@outlinefile=\write3
-\openout3 = `ribbons.out'.
+\openout3 = `"ribbons proofs.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 48
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 48.
+ on input line 54.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-[2] (./ribbons.aux)
-
-Package rerunfilecheck Warning: File `ribbons.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ribbons.out':
-(rerunfilecheck)             Before: 6BF3BB119484A762BD3357D18ADB7490;932
-(rerunfilecheck)             After:  8824D8DA99598C78D990C0D11E0B1CE4;807.
+[2] (./ribbons proofs.aux)
+Package rerunfilecheck Info: File `"ribbons proofs".out' has not changed.
+(rerunfilecheck)             Checksum: F210A82E0042D43ABAE1B88C83411FF1;164.
  ) 
 Here is how much of TeX's memory you used:
- 11012 strings out of 476025
- 172076 string characters out of 5790018
- 1861388 words of memory out of 5000000
- 31319 multiletter control sequences out of 15000+600000
+ 11006 strings out of 476025
+ 172181 string characters out of 5790018
+ 1862388 words of memory out of 5000000
+ 31317 multiletter control sequences out of 15000+600000
  518138 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,76p,372b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,76p,381b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -496,10 +500,10 @@ local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
 sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on ribbons.pdf (2 pages, 87904 bytes).
+Output written on "ribbons proofs.pdf" (2 pages, 84066 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

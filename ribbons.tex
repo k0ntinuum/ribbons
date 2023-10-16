@@ -31,7 +31,7 @@
 \newcommand{\ident}{I}
 \renewcommand{\center}{\mathring f  }
 
-
+\newcommand{\N}{ \Bbb N}
 
 %\vskip1.0in
 
@@ -40,21 +40,32 @@
 \begin{document}
 {\setstretch{0.0}{
 
+\begin{huge}
 RIBBONS
 
 \section{Definition}
-A function $f : \Bbb Z \to \Bbb Q$ is a \b{ribbon} when 
 
-(1) $ f(1) < f(2) < f(3) < ... < f(-3) < f(-2) < f(-1)$
+Let $\Bbb M$ (for mirror) be the set of all nonzero integers.
 
-(2) $f(-n) - f(n) \longrightarrow 0$ as $n \longrightarrow \infty$. 
+A function $f : \Bbb M \to \Bbb Q$ is a \b{ribbon} when 
+
+$0 <  f(1) < f(2) < f(3) < ... < f(-3) < f(-2) < f(-1)$
+
+and
+
+$f(-n) - f(n) \longrightarrow 0$ as $n \longrightarrow \infty$. 
 
 Denote the set of all such ribbons by $\ribbons$.
 
 \section{An Example}
 
-Let $f(0) = 1, f(n) = n[n+1]^{-1}$ for $n > 0$, and $f(n) = [|n|+1]|n|^{-1}$ for $n < 0$. Then  $f = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},1,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a ribbon.\\
-As we'll see, $f$ is a multiplicative identity.
+For $n \in \N$, define $I(n) = \frac{n}{n+1}$ and $I(-n) = [I(n)]^{-1}$. 
+
+Then  $I = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a ribbon.\\
+
+Note the repeated commas that mark the absent center, since $I$ is not defined at zero. 
+
+Note also that $I$ is (will turn out to be ) a multiplicative identity.
 
 
 \section{Order }
@@ -63,9 +74,12 @@ Define $f \forks g$ if $n > 0 \implies g(n) \le f(n) < f(-n) \le g(-n)$.
 
 Then define $f \sim  g$ if $\exists h \in \ribbons$ such that $ h \forks f$ and $h \sqsubset g $. 
 
+In other words, $f$ and $g$ are equivalent if there is some $h$ that \q{forks} or \q{pierces} them both.
+
+
 Also define $f < g$ if there $\exists n > 0$ such that $ f(-n) < g(n)$. 
 
-For all $f,g \in \ribbons$ we have $f < g, f>g$, or $f \sim g$.\\
+This gives us $f < g, f>g$, or $f \sim g$ for any $f,g \in \ribbons$ 
 
 \section{Addition and Multiplication}
 
@@ -73,50 +87,27 @@ Define $f + g$ by $(f + g)(z) = f(z) + g(z)$.
 
 Define $fg$ by $(fg)(z) = f(z)g(z)$. 
 
-Then $f_0 \sim f_1, g_0 \sim g_1 \implies f_0 + g_0 \sim f_1 + g_1$.
+Then $f \sim f', g \sim g' \implies f + g\sim f' + g'$.
 
-Also $f_0 \sim f_1, g_0 \sim g_1 \implies f_0g_0 \sim f_1g_1$.\\
+Also $f \sim f', g \sim g' \implies fg \sim f'g'$.\\
 
-\section{A Multiplicative Identity}
-
-Let $\ident(0) = 1, \ident(z) = z[z+1]^{-1}$ for $z > 0$, and $\ident(z) = [|z|+1]|z|^{-1}$ for $z < 0$. Then  $\ident = ...\frac{6}{5},\frac{5}{4},\frac{4}{3},\frac{3}{2},\frac{2}{1},1,\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},\frac{5}{6},... $ is a multiplicative identity on $\ribbons$. 
 
 \section{A Multiplicative Inverse}
 
 For $f \in \ribbons$, define $f^*$ by $f^*(z) =  [ f(-z) ]^{-1} $. Then $f^* \in \ribbons$ and $ff^* \sim \ident$.
 
-\section{Injecting rational numbers into the set of ribbons}
+\section{Injecting Positive Rationals}
 
-Define $f^p : Z \to Q$ by $f^p(z) = \frac{z}{z+1}p$ if $z > 0$, $f^p(z) = \frac{|z|+1}{|z|}p$ if $z < 0$, and $f^p(0) = p$. Then $f^p = ... \frac{5}{4}p,\frac{4}{3}p,\frac{3}{2}p,\frac{2}{1}p,p,\frac{1}{2}p,\frac{2}{3}p,\frac{3}{4}p,\frac{4}{5}p ...$ is a ribbon.
+We can inject any positive $q \in \Bbb Q$ into the ribbons by scaling I. 
 
-\textbf{Proposition:} $\neg [ f < g ] \wedge \neg [ g < f ]  \implies f \approx g$.\\ 
-
-
-Let $\lceil{a,b}\rceil$ be the maximum and $\lfloor{a,b}\rfloor$ be the minimum of $a$ and $b$.  Then  $z > 0  \implies \lceil f(z),g(z) \rceil < \lfloor f(-z),g(-z) \rfloor$. 
-
-Define $h(z) = \lfloor f(z),g(z) \rfloor$ for $z < 0$, $h(z) = \lceil f(z),g(z) \rceil$ for $ z > 0$. Then $h \forks f$ and $h \forks g$, so $f \sim g$.\\
-
-\b{Proposition:} $f \in \ribbons \implies f^* \in \ribbons$.\\
+Define $[q] \in \ribbons$ by $ [q](n) = \frac{n}{n+1}q$ and $[q](-n) = [q(n)]^{-1}$.
 
 
-Note that $0 < f(1) \le f(n) < f(-n)$, so that $[f(-n)]^{-1} <  [f(n)]^{-1} \le [f(1)]^{-1}$, and $f^*(-n) - f^* (n) = f(n)^{-1} - f(-n)^{-1} = [f(-n) - f(n)][f(-n)^{-1}f(n)^{-1}] < [f(-n) - f(n)][f(1)]^{-2} \to 0$. So $f^* \in I$.\\
 
-\section{A limit}
+\end{huge}
 
-Let  $f_{n+1} \forks f_n$ for all $n \in \Bbb N$. Then this sequence has a \b{center}, which is something like a limit in our realm without a distance function (because we don't have subtraction.) 
-
-Define $\center(z) =  f_{|z|}(z).$ Then $\forall n \ \center \forks f_n$, and any other ribbon that manages this is equivalent to $\center$.
-
-\section{Identity}
-We check that $ff^* \in \ribbons$. Let $f \in \ribbons$. Then $n > 0 \implies (ff^*)(n) = \frac{f(n)}{f(-n)}$. 
-
-Also $f(n) < f(n+1)$ and $f(-n-1) < f(-n)  \implies f(n)f(-n-1) < f(n+1)f(-n) \implies \frac{f(n)}{f(-n)} < \frac{f(n+1)}{f(-(n+1)} $. So $ff^*$ is increasing on $\Bbb N$. 
-
-Note that $z < 0 \implies z = -n \implies (ff^*)(-n) = \frac{f(-n)}{f(n)}$.
-
-Then $f(-n) > f(-(n+1))$ and $f(n+1) > f(n)$ give $f(-n)f(n+1) > f(-(n+1))f(n)$. So $\frac{f(-n)}{f(n)} > \frac{f(-(n+1)}{f(n+1)}$, and $ff^*$ is decreasing on $- \Bbb N$.
-
-Also $\frac{f(-n)}{f(n)}-\frac{f(n)}{f(-n)} = \frac{(f(-n)-f(n))(f(-n)+f(n))}{f(n)f(-n)} \to 0$, since $f$ is bounded and $f \in \ribbons$. 
 }}
+
+
 
 \end{document}
